@@ -5,6 +5,15 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        // You can find your read-only API token under the Settings > API tokens
+        // section of your administrative area:
+        apiToken: `8d88a9702d7d31543a553a889e0851`,
+      },
+    },
+
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

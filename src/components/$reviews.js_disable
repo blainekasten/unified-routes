@@ -1,0 +1,26 @@
+import React from "react"
+import styled from "styled-components"
+
+const Ul = styled.ul`
+  margin: 0;
+`
+
+const Review = styled.li`
+  list-style-type: none;
+`
+
+const ReviewHeader = styled.h1`
+  font-size: 8px;
+  margin: 0;
+`
+
+export default p => (
+  <Ul>
+    {p.data.product.reviews.map(review => (
+      <Review>
+        <ReviewHeader>User A</ReviewHeader>
+        <p>{review}</p>
+      </Review>
+    ))}
+  </Ul>
+)

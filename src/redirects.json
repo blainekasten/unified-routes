@@ -1,0 +1,28 @@
+[
+  {
+    "fromPath": "/foo",
+    "isPermanent": false,
+
+    "redirectInBrowser": true,
+
+    "toPath": "/page-2",
+    "force": true,
+    "statusCode": 399,
+    "rest": {
+      "boo": "baz"
+    }
+  },
+  {
+    "fromPath": "/foo/baz",
+    "isPermanent": false,
+
+    "redirectInBrowser": true,
+
+    "toPath": "/page-2",
+    "force": true,
+    "statusCode": 399,
+    "rest": {
+      "boo": "baz"
+    }
+  }
+]

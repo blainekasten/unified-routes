@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
+
+const Header = styled.header`
+  width: 100%;
+  padding: 1rem;
+  background: skyblue;
+  margin: 0;
+`
 
 export default function (props) {
+  console.log(props)
   const [users, setUsers] = useState([])
 
   useEffect(() => {
@@ -14,15 +24,11 @@ export default function (props) {
     users.find(user => user.id === props.params.id) || "User not found"
 
   return (
-    <div>
-      <h1>User:</h1>
-      <pre>
-        <code>{JSON.stringify(user, null, 4)}</code>
-      </pre>
-      <h1>Props:</h1>
-      <pre>
-        <code>{JSON.stringify(props, null, 4)}</code>
-      </pre>
-    </div>
+    <>
+      <Header>
+        <Link to="/">Back</Link>
+        <h1>{user.name}</h1>
+      </Header>
+    </>
   )
 }
